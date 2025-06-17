@@ -2,19 +2,27 @@ package hexlet.code;
 
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
-//import picocli.CommandLine.Option;
-//import picocli.CommandLine.Parameters;
+import picocli.CommandLine.Option;
+import picocli.CommandLine.Parameters;
 
-@Command(name = "gendiff", version = "gendiff pre-alfa 0.0.0.1", mixinStandardHelpOptions = true,
+@Command(name = "gendiff",
+        version = "gendiff pre-alfa 0.0.0.1",
+        mixinStandardHelpOptions = true,
         description = "Сравнивает два конфигурационных файла и показывает разницу.")
 public class App implements Runnable {
 
-//    @Option(names = { "-s", "--font-size" }, description = "Font size")
-//    int fontSize = 19;
+    @Option(names = {"-f", "--format"}, 
+            description = "выходной формат [по умолчанию: stylish]",
+            defaultValue = "stylish")
+    private String format;
 
-//    @Parameters(paramLabel = "<word>", defaultValue = "Hello, picocli",
-//            description = "Words to be translated into ASCII art.")
-//    private String[] words = { "Hello,", "picocli" };
+    @Parameters(paramLabel = "filepath1",
+            description = "путь до первого файла")
+    private String filepath1;
+
+    @Parameters(paramLabel = "filepath2",
+            description = "путь до второго файла")
+    private String filepath2;
 
     @Override
     public void run() {
