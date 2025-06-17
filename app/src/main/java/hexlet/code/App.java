@@ -5,6 +5,8 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
+import java.util.Map;
+
 @Command(name = "gendiff",
         version = "gendiff pre-alfa 0.0.0.1",
         mixinStandardHelpOptions = true,
