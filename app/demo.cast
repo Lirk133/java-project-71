@@ -1,0 +1,8 @@
+{"version": 2, "width": 80, "height": 24, "timestamp": 1750619383, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
+[0.02688, "o", "\u001b[?2004h\u001b]0;andrey@andrey-ms7a38: ~/myProjects/java-project-71/app\u0007\u001b[01;32mandrey@andrey-ms7a38\u001b[00m:\u001b[01;34m~/myProjects/java-project-71/app\u001b[00m$ "]
+[3.801029, "o", "make test-dron"]
+[4.176205, "o", "\b\b\b\b\b\b\b\b\b\b\b\b\b\b./build/install/app/bin/app src/test/resources/file1.json src/test/resources/file2.json"]
+[5.528011, "o", "\r\n\u001b[?2004l\r"]
+[5.909122, "o", "- follow: false\r\n  host: hexlet.io\r\n- proxy: 123.234.53.22\r\n- timeout: 50\r\n+ timeout: 20\r\n+ verbose: true\r\n\r\n"]
+[5.933494, "o", "\u001b[?2004h\u001b]0;andrey@andrey-ms7a38: ~/myProjects/java-project-71/app\u0007\u001b[01;32mandrey@andrey-ms7a38\u001b[00m:\u001b[01;34m~/myProjects/java-project-71/app\u001b[00m$ "]
+[11.552718, "o", "\u001b[?2004l\r\r\nexit\r\n"]

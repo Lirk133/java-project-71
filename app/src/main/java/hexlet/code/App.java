@@ -1,18 +1,9 @@
 package hexlet.code;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.Map;
 
 @Command(name = "gendiff",
         version = "gendiff pre-alfa 0.0.0.1",
@@ -27,15 +18,15 @@ public class App implements Runnable {
 
     @Parameters(paramLabel = "filepath1",
             description = "путь до первого файла")
-    private String filepath1;
+    private String filePath1;
 
     @Parameters(paramLabel = "filepath2",
             description = "путь до второго файла")
-    private String filepath2;
+    private String filePath2;
 
     @Override
     public void run() {
-        Engine.run(filepath1, filepath2);
+        System.out.println(Differ.generate(filePath1, filePath2));
     }
 
     public static void main(String[] args) {
