@@ -1,10 +1,17 @@
 package hexlet.code;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
 import java.util.Map;
 
 @Command(name = "gendiff",
@@ -28,7 +35,7 @@ public class App implements Runnable {
 
     @Override
     public void run() {
-        System.out.println("Hello World!");
+        Engine.run(filepath1, filepath2);
     }
 
     public static void main(String[] args) {

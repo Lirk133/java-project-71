@@ -2,6 +2,7 @@ plugins {
     id("java")
     id("com.github.ben-manes.versions") version "0.52.0"
     application
+    id("io.freefair.lombok") version "8.4"
 }
 
 group = "hexlet.code"
