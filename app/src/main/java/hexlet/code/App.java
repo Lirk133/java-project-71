@@ -1,5 +1,4 @@
 package hexlet.code;
-
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
@@ -11,7 +10,7 @@ import picocli.CommandLine.Parameters;
         description = "Сравнивает два конфигурационных файла и показывает разницу.")
 public class App implements Runnable {
 
-    @Option(names = {"-f", "--format"}, 
+    @Option (names = {"-f", "--format"},
             description = "выходной формат [по умолчанию: stylish]",
             defaultValue = "stylish")
     private String format;
