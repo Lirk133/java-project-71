@@ -29,6 +29,6 @@ update-deps:
 	# ./gradlew dependencyUpdates -Drevision=release
 
 
-build-run: build run
+build-run: build
 
 .PHONY: build
