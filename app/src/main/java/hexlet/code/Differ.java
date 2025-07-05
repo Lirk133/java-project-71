@@ -15,6 +15,11 @@ import java.util.stream.Stream;
 public class Differ {
 
     public static String generate(String filePath1, String filePath2) {
+
+        if (filePath1.isEmpty() || filePath2.isEmpty()) {
+            return "";
+        }
+
         Map<String, String> file1 = fileInMap(filePath1);
         Map<String, String> file2 = fileInMap(filePath2);
 
@@ -54,14 +59,14 @@ public class Differ {
         String str;
 
         if (Objects.equals(value1, value2)) {
-            str = "  " + key + ": " + value1 + "\n";
+            str = "    " + key + ": " + value1 + "\n";
         } else if (value1 == null) {
-            str = "+ " + key + ": " + value2 + "\n";
+            str = "  + " + key + ": " + value2 + "\n";
         } else if (value2 == null) {
-            str = "- " + key + ": " + value1 + "\n";
+            str = "  - " + key + ": " + value1 + "\n";
         } else {
-            str = "- " + key + ": " + value1 + "\n";
-            str += "+ " + key + ": " + value2 + "\n";
+            str = "  - " + key + ": " + value1 + "\n";
+            str += "  + " + key + ": " + value2 + "\n";
         }
 
         return str;
