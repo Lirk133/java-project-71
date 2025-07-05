@@ -2,12 +2,14 @@ package hexlet.code;
 
 import org.junit.jupiter.api.Test;
 
+import java.nio.file.NoSuchFileException;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestDiffer {
 
     @Test
-    public void testNormal1() throws Exception  {
+    public void testNormal1() throws NoSuchFileException {
         String file1 = "../app/src/test/resources/file1.json";
         String file2 = "../app/src/test/resources/file2.json";
         String result = "  - follow: false\n"
@@ -20,7 +22,7 @@ public class TestDiffer {
     }
 
     @Test
-    public void testNormal2() throws Exception  {
+    public void testNormal2() throws NoSuchFileException  {
         String file1 = "../app/src/test/resources/file2.json";
         String file2 = "../app/src/test/resources/file1.json";
         String result = "  + follow: false\n"
@@ -33,7 +35,7 @@ public class TestDiffer {
     }
 
     @Test
-    public void testEqual() throws Exception  {
+    public void testEqual() throws NoSuchFileException  {
         String file1 = "../app/src/test/resources/file1.json";
         String file2 = "../app/src/test/resources/file1.json";
         String result = "    follow: false\n"
@@ -44,7 +46,7 @@ public class TestDiffer {
     }
 
     @Test
-    public void testEmpty() throws Exception  {
+    public void testEmpty() throws NoSuchFileException  {
         String file1 = "";
         String file2 = "";
         String result = "";
