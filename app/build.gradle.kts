@@ -4,6 +4,7 @@ plugins {
     application
     id("io.freefair.lombok") version "8.4"
     checkstyle
+    id("org.sonarqube") version "6.2.0.5505"
 }
 
 group = "hexlet.code"
@@ -24,5 +25,13 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+sonar {
+    properties {
+        property("sonar.projectKey", "Lirk133_java-project-71")
+        property("sonar.organization", "lirk133")
+        property("sonar.host.url", "https://sonarcloud.io")
+    }
 }
 
