@@ -12,7 +12,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class Differ {
+class Differ {
 
     public static String generate(String filePath1, String filePath2) {
 
