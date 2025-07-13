@@ -11,11 +11,11 @@ import java.util.Map;
 
 public class Parser {
 
-    public static Map<String, String> fileInMap(String filePath) {
+    public static Map<String, Object> fileInMap(String filePath) {
         ObjectMapper mapper = new YAMLMapper();
         var path = Paths.get(filePath).toAbsolutePath().normalize();
         String file;
-        Map<String, String> fileMap;
+        Map<String, Object> fileMap;
 
         try {
             file = Files.readString(path).trim();
