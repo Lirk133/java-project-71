@@ -6,11 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestDiffer {
 
-    @Test
-    public void testNormal1() {
-        String file1 = "../app/src/test/resources/file1.json";
-        String file2 = "../app/src/test/resources/file2.json";
-        String result1 = """
+    String result1 = """
                   - follow: false
                     host: hexlet.io
                   - proxy: 123.234.53.22
@@ -18,7 +14,7 @@ public class TestDiffer {
                   + timeout: 20
                   + verbose: true
                 """;
-        String result2 = """
+    String result2 = """
                   + follow: false
                     host: hexlet.io
                   + proxy: 123.234.53.22
@@ -26,12 +22,28 @@ public class TestDiffer {
                   + timeout: 50
                   - verbose: true
                 """;
-        String result3 = """
+    String result3 = """
                     follow: false
                     host: hexlet.io
                     proxy: 123.234.53.22
                     timeout: 50
                 """;
+
+    @Test
+    public void testNormalJSON() {
+        String file1 = "../app/src/test/resources/file1.json";
+        String file2 = "../app/src/test/resources/file2.json";
+
+        assertEquals(result1, Differ.generate(file1, file2));
+        assertEquals(result2, Differ.generate(file2, file1));
+        assertEquals(result3, Differ.generate(file1, file1));
+    }
+
+    @Test
+    public void testNormalYAML() {
+        String file1 = "../app/src/test/resources/file1.yml";
+        String file2 = "../app/src/test/resources/file2.yml";
+
         assertEquals(result1, Differ.generate(file1, file2));
         assertEquals(result2, Differ.generate(file2, file1));
         assertEquals(result3, Differ.generate(file1, file1));

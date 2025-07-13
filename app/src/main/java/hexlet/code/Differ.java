@@ -1,11 +1,5 @@
 package hexlet.code;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
@@ -20,8 +14,8 @@ class Differ {
             return "";
         }
 
-        Map<String, String> file1 = fileInMap(filePath1);
-        Map<String, String> file2 = fileInMap(filePath2);
+        Map<String, String> file1 = Parser.fileInMap(filePath1);
+        Map<String, String> file2 = Parser.fileInMap(filePath2);
 
         Set<String> allKeys = Stream
                 .concat(file1.keySet().stream(), file2.keySet().stream())
@@ -36,23 +30,6 @@ class Differ {
                     return equalValue(key, value1, value2);
                 })
                 .collect(Collectors.joining());
-    }
-
-    private static Map<String, String> fileInMap(String filePath) {
-        ObjectMapper mapper = new ObjectMapper();
-        var path = Paths.get(filePath).toAbsolutePath().normalize();
-        String file;
-        Map<String, String> fileMap;
-
-        try {
-            file = Files.readString(path).trim();
-            fileMap = mapper.readValue(file, new TypeReference<>() {
-            });
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        return fileMap;
     }
 
     private static String equalValue(String key, String value1, String value2) {

@@ -21,6 +21,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation("info.picocli:picocli:4.7.7")
     implementation(group=("com.fasterxml.jackson.core"), name=("jackson-databind"), version=("2.17.2"))
+    implementation(group=("com.fasterxml.jackson.dataformat"), name=("jackson-dataformat-yaml"), version=("2.14.2"))
 }
 
 tasks.test {

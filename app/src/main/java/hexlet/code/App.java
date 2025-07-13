@@ -29,6 +29,11 @@ public class App implements Runnable {
     }
 
     public static void main(String[] args) {
+
+//        String file1 = "../app/src/test/resources/file1.json";
+//        String file2 = "../app/src/test/resources/file2.json";
+//        System.out.println(Differ.generate(file1, file2));
+
         int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);
     }
