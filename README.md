@@ -6,7 +6,9 @@
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=Lirk133_java-project-71&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=Lirk133_java-project-71)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Lirk133_java-project-71&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Lirk133_java-project-71)
 
+---
 ## Вычислитель отличий
+---
 
 Эта программа для вычисления отличий в ваших файлах JSON и YAML.
 
@@ -16,6 +18,8 @@
 ```
 /build/install/app/bin/app file1.json file2.json
 ```
+
+---
 
 Вычислитель обладает возможностью изменять формат вывода (--format) (stylish - используется по умолчанию, plain, json).
 
@@ -68,6 +72,6 @@ Property 'setting3' was updated. From true to 'none'
 {"setting2":300,"key1":"value1","setting3":"none","key2":"value2","chars2":false,"setting1":"Another value","chars1":["a","b","c"],"numbers4":[4,5,6],"numbers3":[3,4,5],"numbers2":[22,33,44,55],"numbers1":[1,2,3,4],"obj1":{"nestedKey":"value","isNested":true},"default":["value1","value2"],"checked":true,"id":null}
 ```
 
-
+---
 
 [Asciinema](https://asciinema.org/a/5yAvBxCJXkAV1x4WbqJ7OapDN)
