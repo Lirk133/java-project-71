@@ -32,3 +32,16 @@ update-deps:
 build-run: build
 
 .PHONY: build
+
+test-d:
+	./build/install/app/bin/app src/test/resources/file1.yml src/test/resources/file2.yml
+
+test-plain:
+	./build/install/app/bin/app --format plain src/test/resources/file1.yml src/test/resources/file2.yml
+
+test-stylish:
+	./build/install/app/bin/app --format stylish src/test/resources/file1.yml src/test/resources/file2.yml
+
+test-json:
+	./build/install/app/bin/app --format json src/test/resources/file1.yml src/test/resources/file2.yml
+
