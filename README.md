@@ -70,5 +70,4 @@ Property 'setting3' was updated. From true to 'none'
 
 
 
-### Asciinema
-https://asciinema.org/a/5yAvBxCJXkAV1x4WbqJ7OapDN
+[Asciinema](https://asciinema.org/a/5yAvBxCJXkAV1x4WbqJ7OapDN)
